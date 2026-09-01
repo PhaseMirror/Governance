@@ -26,7 +26,7 @@ We will adopt a **Kubernetes‑native, blue‑green deployment** strategy comple
 | **Configuration** | YAML policy files stored in a dedicated ConfigMap, rendered from `src/config/template.yaml` and policy‑specific `.yaml` under `models/legalese-scopist/templates/`.
 | **Observability** | **Prometheus** + **Grafana** dashboards; **OpenTelemetry** instrumentation in the Rust engine.
 | **Secrets Management** | **HashiCorp Vault** (integrated via side‑car injector) for TLS certificates and token secrets.
-| **Logging** | Structured JSON logs written by `WormStorage.log_preservation_event`; forwarded to **ELK** stack.
+| **Logging** | Structured JSON logs written by `CrmfStorage.log_preservation_event`; forwarded to **ELK** stack.
 
 ## Alternatives Considered
 
@@ -73,7 +73,7 @@ We will adopt a **Kubernetes‑native, blue‑green deployment** strategy comple
    - Enable Kubernetes `PodSecurityPolicy` with `runAsNonRoot` and read‑only root filesystem.
    - Run container as non‑root user (UID 1000).
 7. **Disaster Recovery**
-   - Replicate the `WormStorage` log file to a persistent volume claim (PVC) backed by encrypted block storage.
+   - Replicate the `CrmfStorage` log file to a persistent volume claim (PVC) backed by encrypted block storage.
    - Periodically snapshot the PVC to an off‑site bucket.
    - Provide a restoration script that replays the log to reconstruct the chain of custody.
 8. **Documentation & Governance**
@@ -87,7 +87,7 @@ We will adopt a **Kubernetes‑native, blue‑green deployment** strategy comple
 |------|------------|--------|------------|
 | Misconfiguration of policy YAML leading to unintended retention periods. | Medium | High (legal exposure) | Enforce schema validation in CI (`cargo validate-config`). |
 | Container image vulnerability. | Low | High | `cargo audit` + Docker image scanning in CI; auto‑remediate via Dependabot. |
-| Blue‑green traffic split causing inconsistent state. | Low | Medium | Make the service stateless; all state stored in `WormStorage` which is persisted. |
+| Blue‑green traffic split causing inconsistent state. | Low | Medium | Make the service stateless; all state stored in `CrmfStorage` which is persisted. |
 | Vault secret leakage. | Low | Critical | Use Vault Agent sidecar with auto‑renew; restrict access via K8s RBAC. |
 
 ## Acceptance Criteria

@@ -182,7 +182,7 @@ HIPAA PHI Records
 III. Data Integrity and "Zero Drift" Standards
 To ensure records remain deterministic and defensible over the 10-year horizon, the following technical safeguards are mandatory:
 Cryptographic Sealing: Every record must be bound by a cryptographic nonce and identity witness at the time of creation to prove execution provenance.
-Immutable Storage: Enterprise records are stored on WORM (Write Once, Read Many) compliant infrastructure to prevent tampering or unauthorized modification.
+Immutable Storage: Enterprise records are stored on immutable, tamper-evident infrastructure (CRMF hash-chained ledger) to prevent tampering or unauthorized modification.
 Stability Metric Anchoring: Every retained dissonance_report must include the stability_metric ($\lambda_p L_p$) to verify the engine was proven contractive at the moment of decisioning.
 IV. Data Portability and Regulatory Access
 Export Readiness: All retained data must be exportable in machine-readable formats (e.g., JSON per the Article 12 Record-Keeping Schema) suitable for submission to EU Supervisory Authorities or the SEC.
@@ -219,7 +219,7 @@ Data Retention Policy; Database schema showing expiry_date.
 RET-02
 Confirm that deletion workflows for high-risk data are disabled until the 10-year horizon is met.
 [ ]
-WORM (Write Once, Read Many) storage configuration logs.
+Immutable CRMF storage configuration logs.
 RET-03
 Inspect the Certification of Destruction process for records exceeding the 10-year limit.
 [ ]
@@ -303,7 +303,7 @@ Objective: Ensure the system is correctly categorized to trigger appropriate ret
 2. 10-Year Record-Keeping (Art. 12)
 Objective: Verify the system meets the "minimum 10 years" retention mandate for high-risk AI artifacts.
 [ ] Retention Flagging: Are all generated Dissonance Reports and Machine Decisions for this system flagged with a 10-year expiry date in the database metadata?
-[ ] WORM Compliance: Can you verify that the execution logs for this system are stored on "Write Once, Read Many" (WORM) infrastructure?
+[ ] Immutable Storage Compliance: Can you verify that the execution logs for this system are stored on immutable, tamper-evident (CRMF hash-chained) infrastructure?
 [ ] Destruction Protocol: Does the system owner have a documented process for obtaining a Certification of Destruction after the 10-year horizon is met?
 3. Deterministic Governance (Art. 11 & 15)
 Objective: Confirm that system behavior is anchored to mathematical invariants.
@@ -322,7 +322,7 @@ Objective: Validate compliance with the Phase Mirror Privacy Policy and HIPAA (i
 [ ] Data Exportability: Can you successfully export a system audit trail in a format suitable for regulatory submission?
 Next Steps for System Owners:
 Remediate "Fail" items immediately by updating system configurations or documentation.
-Attach Evidence: Gather sample Dissonance Reports and WORM storage logs.
+Attach Evidence: Gather sample Dissonance Reports and immutable CRMF storage logs.
 Submit: Provide the completed SAQ to the Governance Lead for final review before the audit window opens.
 Would you like me to draft a Remediation Plan template for any items marked "Fail" in this questionnaire?
 Sources:
@@ -347,7 +347,7 @@ Primary Remediation Action
 Status
 Retention
 10-year mandate not codified in storage metadata.
-Implement WORM-compliant storage triggers.
+Implement CRMF-compliant storage triggers.
 🔴 Pending
 Governance
 Stability Metric ($\lambda_p L_p$) missing from reports.
@@ -364,8 +364,8 @@ Lever
 Metric
 Horizon
 [Project Lead]
-WORM Configuration: Move all high-risk dissonance reports to Write-Once-Read-Many (WORM) infrastructure.
-100% records in WORM storage
+CRMF Configuration: Move all high-risk dissonance reports to immutable, tamper-evident (CRMF hash-chained) infrastructure.
+100% records in CRMF storage
 30 days
 [Eng Lead]
 L0 Invariant Integration: Update CI/CD pipelines to require $\lambda_p L_p < 1$ for all merge actions.

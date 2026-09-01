@@ -18,8 +18,8 @@ The current workspace already contains the governance core:
 - **`phase-mirror`** — L0 invariant checks (`l0_invariants.rs`), `LegislativeEngine` (`legislative.rs`), `L0Validator` (`validator.rs`).
 - **`phase-mirror-client`** — `ConfigurationSeal`, `MultiplicityCertificate`, `PhaseMirrorVerifier` (five-stage verification lifecycle per ADR-117).
 - **`phase_mirror_wasm`** — `verify_resonance_buffer` and `run_gik_diagnostic` exposed via `wasm_bindgen`.
-- **`phase-mirror-mcp`** — Governed MCP tool suite (`verify_ledger`, `evaluate_esi_risk`, `check_governed_bridge`, etc.) with `ContractManager` and `WormStorage`.
-- **`verification-harness`** — `WormLog`, `RegHomRegistry`, `evaluate_governed_bridge` five-gate simulation.
+- **`phase-mirror-mcp`** — Governed MCP tool suite (`verify_ledger`, `evaluate_esi_risk`, `check_governed_bridge`, etc.) with `ContractManager` and `CrmfStorage`.
+- **`verification-harness`** — `AppendOnlyLog`, `RegHomRegistry`, `evaluate_governed_bridge` five-gate simulation.
 - **`Prime/crates/archivum`** — Deterministic WASM execution substrate (`archivum-core`, `archivum-cli`, `archivum-guest`, `example-prime`) with CBOR + Fuel model (`spec/PRIME-ABI-v0.md`).
 - **`Prime/lean/...`** — Lean 4 formalization layer (`contractive_successor_one`, `IsContractive`, `WitnessPreserved`).
 
@@ -39,7 +39,7 @@ Create the **Sovereign Stack** as six binding components. Four are new crates/di
 │  ┌─────────────────┐    ┌─────────────────┐    ┌───────────────┐  │
 │  │ phase-mirror    │    │ phase-mirror-  │    │ verification- │  │
 │  │ (L0 + Legislative│───▶│ client         │───▶│ harness       │  │
-│  │  + Validator)   │    │ (Seal + Cert + │    │ (WormLog +    │  │
+│  │  + Validator)   │    │ (Seal + Cert + │    │ (AuditLog +   │  │
 │  └─────────────────┘    │  Verifier)     │    │  RegHom)      │  │
 │         │               └─────────────────┘    └───────────────┘  │
 │         │                       │                       │          │
@@ -116,7 +116,7 @@ pub trait SurfaceAdapter {
 
 ### New Component 3: `archivum-local-first` (local-first data layer)
 
-**Purpose**: Replace the current `WormStorage` JSONL-on-host-filesystem model with a local-first, CRDT-mergeable, Ed25519-signed append-only log that works identically on desktop, browser extension storage, and ESP32 NVS.
+**Purpose**: Replace the current `CrmfStorage` JSONL-on-host-filesystem model with a local-first, CRDT-mergeable, Ed25519-signed append-only log that works identically on desktop, browser extension storage, and ESP32 NVS.
 
 **Location**: `packages/archivum-local-first/`
 
@@ -193,7 +193,7 @@ pub async fn attest_cross_surface_mission(
     surfaces: Vec<SurfaceState>,
     mission_json: &str,
     contract_manager: &ContractManager,
-    ace_storage: &Mutex<WormStorage>,
+    ace_storage: &Mutex<CrmfStorage>,
 ) -> Result<CrossSurfaceAttestation, GovernanceError>
 ```
 
@@ -372,5 +372,5 @@ jobs:
 - `phase-mirror-client/src/lib.rs` — ConfigurationSeal, MultiplicityCertificate, PhaseMirrorVerifier.
 - `phase_mirror_wasm/src/lib.rs` — Existing WASM governance client.
 - `phase-mirror-mcp/src/tools/mod.rs` — Governed MCP tool suite.
-- `verification-harness/src/lib.rs` — WormLog, RegHomRegistry, governed bridge simulation.
+- `verification-harness/src/lib.rs` — AppendOnlyLog, RegHomRegistry, governed bridge simulation.
 - `Prime/crates/archivum/spec/PRIME-ABI-v0.md` — Deterministic WASM ABI specification.

@@ -129,5 +129,5 @@ The divergent agent findings were reconciled by recognizing that the test harnes
 - Existing W8A8 exactness proof: `crates/ace/src/lib.rs` (lines 90–125)
 - ZK circuit budget target: `circuits/README.md` and `docs/adr/proposed/ADR-103-Poseidon2-Integration-Roadmap.md`
 - Sedona Spine concepts: `lean/Core/prime_tensors/sedona_spine/` and `crates/engine/src/sigma_layer.rs`
-- native ACE certificates and triple lock governance audit concepts: `docs/native ACE certificates and triple lock governance_CRMF_GOLDILOCKS.tex` and `crates/snapkitty/ace/`
+- native ACE certificates and triple lock governance audit concepts: `docs/native ACE certificates and triple lock governance_CRMF_GOLDILOCKS.tex` and `crates/ace/`
 - Existing CI gate: `scripts/validate_zero_drift.sh`

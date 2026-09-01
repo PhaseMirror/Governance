@@ -168,4 +168,4 @@ impl NoiseChannel {
 - `Prime/lean/PIRTM/` — Existing Lean PIRTM module
 - ADR-077 (Fock-Space Contractivity) — Foundational stability theorem
 - ADR-064 (MatrixEngine) — Tensor kernel formalization
-- ADR-060 (SnapKitty/UAC) — Quantum extension context
+- ADR-060 (UAC Integration) — Quantum extension context

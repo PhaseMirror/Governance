@@ -231,10 +231,10 @@
 | 224 | ADR-RML-006 | `max` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/Analytic/FloatModel.lean |
 | 225 | ADR-RML-006 | `h` | DOC_STALE | Governance/Archive_and_Drafts/characteristic_1_constructions.md | (none) |
 | 226 | ADR-RML-006 | `k` | CODE_STALE | Governance/Archive_and_Drafts/characteristic_1_constructions.md | rust/ace-zk/src/ffi.rs |
-| 227 | ADR-RML-006 | `decide` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/gated/SNAPKITTY/Bifrost/Bifrost/Policy.lean |
+| 227 | ADR-RML-006 | `decide` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/Multiplicity/PolicyEngine/Admissibility.lean |
 | 228 | ADR-RML-006 | `ring` | DOC_STALE | Governance/Archive_and_Drafts/characteristic_1_constructions.md | (none) |
 | 229 | ADR-RML-006 | `nf_eq` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/F1/Analysis/RingNF.lean |
-| 230 | ADR-RML-006 | `decide` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/gated/SNAPKITTY/Bifrost/Bifrost/Policy.lean |
+| 230 | ADR-RML-006 | `decide` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/Multiplicity/PolicyEngine/Admissibility.lean |
 | 231 | ADR-RML-006 | `ring` | DOC_STALE | Governance/Archive_and_Drafts/characteristic_1_constructions.md | (none) |
 | 232 | ADR-RML-006 | `add_comm` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/Analytic/FloatModel.lean |
 | 233 | ADR-RML-006 | `mul_comm` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/Analytic/FloatModel.lean |
@@ -250,7 +250,7 @@
 | 243 | ADR-RML-006 | `ring_uor` | DOC_STALE | Governance/Archive_and_Drafts/characteristic_1_constructions.md | (none) |
 | 244 | ADR-RML-006 | `ring` | DOC_STALE | Governance/Archive_and_Drafts/characteristic_1_constructions.md | (none) |
 | 245 | ADR-RML-006 | `nf_eq` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/F1/Analysis/RingNF.lean |
-| 246 | ADR-RML-006 | `decide` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/gated/SNAPKITTY/Bifrost/Bifrost/Policy.lean |
+| 246 | ADR-RML-006 | `decide` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/Multiplicity/PolicyEngine/Admissibility.lean |
 | 247 | ADR-RML-006 | `nf_eq` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/F1/Analysis/RingNF.lean |
 | 248 | ADR-RML-006 | `nf_eq` | GOLDEN | Governance/Archive_and_Drafts/characteristic_1_constructions.md | lean/F1/Analysis/RingNF.lean |
 | 249 | ADR-RML-006 | `ring` | DOC_STALE | Governance/Archive_and_Drafts/characteristic_1_constructions.md | (none) |
@@ -336,7 +336,7 @@
 | 329 | ADR-RML-032 | `expdiff_bound` | GOLDEN | Governance/Archive_and_Drafts/f1_square_intersection_theory.md | lean/F1/Analysis/ExpGen.lean |
 | 330 | ADR-RML-032 | `efct_reindex` | GOLDEN | Governance/Archive_and_Drafts/f1_square_intersection_theory.md | lean/F1/Analysis/Exp.lean |
 | 331 | ADR-RML-032 | `qpow` | GOLDEN | Governance/Archive_and_Drafts/f1_square_intersection_theory.md | lean/F1/Analysis/ExpGen.lean |
-| 332 | ADR-RML-032 | `decide` | GOLDEN | Governance/Archive_and_Drafts/f1_square_intersection_theory.md | lean/gated/SNAPKITTY/Bifrost/Bifrost/Policy.lean |
+| 332 | ADR-RML-032 | `decide` | GOLDEN | Governance/Archive_and_Drafts/f1_square_intersection_theory.md | lean/Multiplicity/PolicyEngine/Admissibility.lean |
 | 333 | ADR-RML-032 | `zeta` | GOLDEN | Governance/Archive_and_Drafts/f1_square_intersection_theory.md | lean/ComplexKappa/Zeta.lean |
 | 334 | ADR-RML-032 | `zetadiff_bound` | GOLDEN | Governance/Archive_and_Drafts/f1_square_intersection_theory.md | lean/F1/Analysis/Zeta.lean |
 | 335 | ADR-RML-032 | `log` | GOLDEN | Governance/Archive_and_Drafts/f1_square_intersection_theory.md | lean/Analytic/Model.lean |
@@ -1230,7 +1230,7 @@
 | 1223 | ADR-RML-018 | `evidence_link` | DOC_STALE | Governance/research/Some of your claims are still purely metaphorical,.md | (none) |
 | 1224 | ADR-RML-??? | `kind` | GOLDEN | Governance/research/We are creating a Phase Mirror version of Antigrav.md | lean/Antigrav/AuditLog.lean |
 | 1225 | ADR-RML-??? | `source` | GOLDEN | Governance/research/We are creating a Phase Mirror version of Antigrav.md | lean/Antigrav/AuditLog.lean |
-| 1226 | ADR-RML-??? | `priority` | GOLDEN | Governance/research/We are creating a Phase Mirror version of Antigrav.md | lean/gated/SNAPKITTY/Lean4PolicyKernel/Core.lean |
+| 1226 | ADR-RML-??? | `priority` | GOLDEN | Governance/research/We are creating a Phase Mirror version of Antigrav.md | lean/Multiplicity/PolicyEngine/Core.lean |
 | 1227 | ADR-RML-??? | `created_at` | GOLDEN | Governance/research/We are creating a Phase Mirror version of Antigrav.md | lean/Antigrav/AuditLog.lean |
 | 1228 | ADR-RML-??? | `dedupe_key` | GOLDEN | Governance/research/We are creating a Phase Mirror version of Antigrav.md | lean/Antigrav/AuditLog.lean |
 | 1229 | ADR-RML-??? | `required_shift` | GOLDEN | Governance/research/We are creating a Phase Mirror version of Antigrav.md | lean/Antigrav/AuditLog.lean |

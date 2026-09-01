@@ -162,7 +162,7 @@ This creates a **cryptographic proof of existence** for every operational event,
 
 - `contracts/AnchorRegistry.sol`
 - `sidecar/state-anchor/index.ts`
-- `lean/SNAPKITTY/SnapKitty/AnchorRegistry.lean`
+- `lean/Multiplicity/Attestation.lean`
 - `scripts/verify_anchor.py`
 - Updated native ACE certificates and triple lock governance archival script to include the on-chain root hash.
 - Grafana panel showing "Last Anchor Block" and "Anchor Verification Status".

@@ -193,7 +193,7 @@ impl MQNN {
 - `publications/M-QNN/templatePRIME.tex` — Publication template
 - `Prime/crates/hybrid-quantum/` — Existing Rust crate
 - `Prime/lean/QUANTUM/` — Existing Lean module
-- ADR-060 (SnapKitty/UAC) — QCFI, MA-VQE, HSEC integration
+- ADR-060 (UAC Integration) — QCFI, MA-VQE, HSEC integration
 - ADR-064 (MatrixEngine) — Tensor kernel formalization
 - ADR-068 (MOC/CRMF) — Contraction certificates
 - `publications/Quantum-AGI Claims/` — Quantum AGI architecture

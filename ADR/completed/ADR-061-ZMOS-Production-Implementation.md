@@ -138,5 +138,5 @@ end ADR.Zmos
 - `Prime/crates/archivum/` — Immutable witness ledger
 - `publications/Sovereign-Stack-Synthesis/SOVEREIGN_STACK_DEFENSIVE_PUBLICATION.md` — Λ-Trace Atomization and Twin Binding
 - ADR-002 (Sedona Spine) — Path of Integrity mandate
-- ADR-060 (SnapKitty/UAC Integration) — Thermodynamic Window and Entropy Bounds
+- ADR-060 (UAC Integration) — Thermodynamic Window and Entropy Bounds
 - `Prime/docs/adr/ADR_006_Phase_Mirror_Governance.md` — Deployment gate state machine

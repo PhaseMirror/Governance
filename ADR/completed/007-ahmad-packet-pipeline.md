@@ -24,7 +24,7 @@ An Ahmad Packet is the serialized transport layer (e.g., Protobuf) containing:
 Upon receiving an Ahmad Packet, the Goldilocks Kernel executes the following pipeline:
 
 1.  **Jubilee Admission Filter**:
-    *   The kernel evaluates `jubilee_admissible(packet.DriftCertificate, current_tick, ΔJ, WormLog)`.
+    *   The kernel evaluates `jubilee_admissible(packet.DriftCertificate, current_tick, ΔJ, AuditLog)`.
     *   **Rule**: The packet's `tick` must fall within the current active $\Delta J$, and the `claimed_thickness` must exactly match the `TissueSnapshot` anchored in the Lambda-Proof / Archivum log.
     *   *Failure*: Immediate rejection ($\perp_R(E)$). No human override permitted.
 2.  **Morphism Translation & RegHom Check**:

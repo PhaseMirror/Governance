@@ -15,7 +15,7 @@ The integration exposes LM Studio's local inference capabilities (completion, em
 - Contract governance (`ContractManager` / `mcp-contract.json`)
 - Sedona Spine L0 invariant enforcement (`SedonaSpineEvaluator`, `LambdaTrace` contractivity receipts)
 - Triple-Lock sovereignty gating (mirroring the pattern from `phase-mirror-gpt` / `QwenSovereigntyGate`)
-- native ACE certificates and triple lock governance audit persistence (`WormStorage`, JSONL append-only ledger)
+- native ACE certificates and triple lock governance audit persistence (`CrmfStorage`, JSONL append-only ledger)
 
 ---
 
@@ -29,7 +29,7 @@ The integration exposes LM Studio's local inference capabilities (completion, em
 | Transport | stdio (primary) + WebSocket (`--ws`) |
 | Governance | `ContractManager` with `notify`-based hot-reload of `mcp-contract.json` |
 | Invariants | `SedonaSpineEvaluator` — checks `λ_p * L_p < 1.0` and non-empty `zero_spacings` |
-| Persistence | `WormStorage` — append-only JSONL, SHA-256 chained, native ACE certificates and triple lock governance semantics |
+| Persistence | `CrmfStorage` — append-only JSONL, SHA-256 chained, native ACE certificates and triple lock governance semantics |
 | Existing Tools | `verify_ledger`, `evaluate_esi_risk`, `check_governed_bridge`, `scan_litigation_hold`, `scan_spoliation_risk`, `get_stability_metric`, `attest_cross_domain_mission`, `health_check`, `sovereign_posture`, `run_command`, `get_metrics` |
 | Key Pattern | Every tool wraps its result in a `ContractivityReceipt` with LambdaTrace witness |
 
@@ -110,7 +110,7 @@ This pattern is the blueprint for the LM Studio bridge.
         │           │           │               │
         │           │           ▼               │
         │           │  ┌─────────────────────┐ │
-        │           │  │ WormStorage         │ │
+        │           │  │ CrmfStorage         │ │
         │           │  │ (append-only JSONL) │ │
         │           │  └─────────────────────┘ │
         └───────────│           │
@@ -139,7 +139,7 @@ This pattern is the blueprint for the LM Studio bridge.
 │  ├── lib.rs              (existing MCP core)                  │
 │  ├── main.rs             (existing binary entry)              │
 │  ├── governance/         (existing ContractManager)           │
-│  ├── persistence/        (existing WormStorage)               │
+│  ├── persistence/        (existing CrmfStorage)               │
 │  ├── transport/          (existing stdio + ws)                │
 │  ├── tools/              (existing domain tools)              │
 │  │   ├── mod.rs                                             │
@@ -640,7 +640,7 @@ Layer 3: TripleLockBridge
   └── Pre-flight: TripleLockSuite.verify(mission_id, prompt, ctx)
   └── Post-flight: TripleLockSuite.verify(mission_id, output_text, ctx)
 
-Layer 4: WormStorage
+Layer 4: CrmfStorage
   └── Every LLM call logged with prompt_hash, output_hash, timestamp, mission_id
   └── SHA-256 chained JSONL for forensic audit
 
@@ -761,7 +761,7 @@ tail -1 ace_audit.jsonl | jq .
 | LM Studio API latency | `get_metrics` | p99 > 5000ms |
 | Spectral radius | `get_metrics` | > 0.95 (divergence risk) |
 | L_Φ drift | `get_metrics` | > 0.90 |
-| native ACE certificates and triple lock governance chain integrity | `WormStorage::verify_chain()` | false (any break) |
+| native ACE certificates and triple lock governance chain integrity | `CrmfStorage::verify_chain()` | false (any break) |
 | Contract hot-reload events | stderr | any unexpected reload |
 
 ---
@@ -794,7 +794,7 @@ tail -1 ace_audit.jsonl | jq .
 |------|------|
 | `phase-mirror-mcp/src/lib.rs:104-338` | MCP request routing (`process_request`) |
 | `phase-mirror-mcp/src/governance/mod.rs:60-138` | `ContractManager` with hot-reload |
-| `phase-mirror-mcp/src/persistence/mod.rs:25-113` | `WormStorage` (append-only JSONL) |
+| `phase-mirror-mcp/src/persistence/mod.rs:25-113` | `CrmfStorage` (append-only JSONL) |
 | `phase-mirror-mcp/src/transport/ws.rs:1-71` | WebSocket Axum transport |
 | `phase-mirror-gpt/src/qwen_sovereignty_gate.rs:1-125` | Triple-Lock LLM gate pattern (reference) |
 | `phase-mirror-gpt/src/transport.rs:67-304` | `McpTransportWrapper` MCP handler |

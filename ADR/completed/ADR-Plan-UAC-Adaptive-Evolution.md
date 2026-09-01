@@ -344,7 +344,7 @@ formal guarantees.
   `ActiveSpace.lean`).
 
 **Artifacts**: `scripts/aegiss.py`,
-`lean/SNAPKITTY/SnapKitty/ActiveSpace.lean`, updated `qaas_endpoints.rs`.
+`lean/Multiplicity/universal_atomic/Constraints.lean`, updated `qaas_endpoints.rs`.
 
 **Dependencies**: PySCF or similar for DFT, Lean4.
 
@@ -388,7 +388,7 @@ using idle qubits for error correction while running a VQE.
 - Formal deadlock‑free proof.
 
 **Artifacts**: `src/resource_manager.rs`,
-`lean/SNAPKITTY/SnapKitty/ResourceScheduler.lean`, updated integration tests.
+`lean/Multiplicity/universal_atomic/BoundaryProofs.lean`, updated integration tests.
 
 **Dependencies**: None beyond Rust.
 

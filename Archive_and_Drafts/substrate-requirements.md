@@ -8,7 +8,7 @@
 **Status:** **Ratified Formal Constitution** / **Rust Integration: In-Progress (Contract-Bound)**
 
 ## 1. Constitutional Mandate
-To operate as a lawful execution substrate for the Multiplicity Operator Calculus (MOC) and the Prime-Indexed Recursive Transition Machine (PIRTM), the underlying runtime (e.g., Rust/SnapKitty Goldilocks Kernel) must not only verify static labels but dynamically enforce state conservation during live hydration.
+To operate as a lawful execution substrate for the Multiplicity Operator Calculus (MOC) and the Prime-Indexed Recursive Transition Machine (PIRTM), the underlying runtime (e.g., Rust/Goldilocks Kernel) must not only verify static labels but dynamically enforce state conservation during live hydration.
 
 **Terminological or example-level alignment is insufficient.** The substrate must explicitly enforce L0 contraction and multiplicity thickness preservation at runtime.
 
@@ -91,12 +91,12 @@ To pass certification, the substrate must empirically successfully execute this 
 ## 5. Integration Spike Deliverables (14-Day Horizon)
 To elevate the Rust integration from "in-progress" to "Prime Materia", the following must be delivered:
 
-1. **SnapKitty PR**: A pull request to the Rust kernel bridging the static logic with the `evaluate_governed_bridge` dynamic non-expansion implementation.
+1. **Goldilocks PR**: A pull request to the Rust kernel bridging the static logic with the `evaluate_governed_bridge` dynamic non-expansion implementation.
 2. **Execution Trace Verification**: The 10,000-case numeric harness must log a trace exactly mirroring the Treasury $\to$ Clinical scenario outlined in Section 4.
 3. **Formal Artifact Binding**: The Lean 4 `.olean` file (containing `avp_to_prime_sound` and `ere_preserves_jubilee`) must be actively consumed by the FFI boundary during `RegHom` insertion.
 
 ## 6. Verification Harness Acceptance Criteria
-To achieve "Prime Materia" status, the proposed SnapKitty integration must pass the following numeric test within the adversarial harness:
+To achieve "Prime Materia" status, the proposed Goldilocks integration must pass the following numeric test within the adversarial harness:
 *   **Trace Test:** `test_treasury_to_clinical_governed_bridge`
 *   **Assertion:** `assert!(post_transition_thickness <= live_snapshot.thickness)`
 *   **Requirement:** The test must explicitly calculate `post_transition_thickness` using the exact `surviving_structure` metric (primes + anchors + passes) dynamically on simulated memory. **Reliance on a proxy (e.g., Merkle stability, static AST tag checks) is strictly prohibited and constitutes a failure of L0 integration.**

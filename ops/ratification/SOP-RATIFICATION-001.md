@@ -12,7 +12,7 @@ To govern the 7-day transition of the Lawful Protocol-State from the **Quarantin
 
 ### Day 3-5: Simulated Autoritative Commitment
 - **Action**: Escalation of the Phase Mirror to `Authoritative` mode via the hot-reloading governance engine.
-- **Simulation**: Execute the `l0-verification-harness` against simulated SnapKitty traces (e.g., Treasury→Clinical).
+- **Simulation**: Execute the `l0-verification-harness` against simulated Goldilocks traces (e.g., Treasury→Clinical).
 - **Audit**: All successful simulations must trigger a **Pre-seal Validity Predicate (VP)** check and emit a "dry-run" Lambda-Proof / Archivum block.
 
 ### Day 6: Final Hardening

@@ -161,5 +161,5 @@ impl PrimeWeightedQFT {
 - `PIRTM/Prime-Encoded Shors Algorithm/EnhancedPRIME.tex` — Algorithm details
 - `Prime/crates/hybrid-quantum/` — Existing hybrid quantum crate
 - ADR-072 (M-QNN) — Quantum-classical interface
-- ADR-060 (SnapKitty/UAC) — QCFI, MA-VQE, HSEC context
+- ADR-060 (UAC Integration) — QCFI, MA-VQE, HSEC context
 - ADR-077 (Fock-Space Contractivity) — Foundational stability

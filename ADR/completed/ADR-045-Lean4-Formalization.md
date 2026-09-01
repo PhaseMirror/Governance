@@ -4,7 +4,7 @@
 **Adopted**
 
 ## Context
-The Universal Atomic Calculator (UAC) currently relies on Lean 4 (`SnapKitty`) to mathematically prove the physics bounds (MA-VQE energy constraints, ThermalWindow, HSEC entropy, and Q-SQD physical fingerprint stability) at the Rust and FPGA levels. However, the finality layer (the Circom ZK circuits in `circuits/` and the EVM Solidity contracts in `contracts/`) operates outside of this formal Lean verification envelope.
+The Universal Atomic Calculator (UAC) currently relies on Lean 4 to mathematically prove the physics bounds (MA-VQE energy constraints, ThermalWindow, HSEC entropy, and Q-SQD physical fingerprint stability) at the Rust and FPGA levels. However, the finality layer (the Circom ZK circuits in `circuits/` and the EVM Solidity contracts in `contracts/`) operates outside of this formal Lean verification envelope.
 
 To achieve true end-to-end mathematical provenance under the Sedona Spine mandate, we must expand our Lean 4 formalization down to the ZK circuits and the smart contracts, ensuring the arithmetic constraints executed on-chain perfectly match the proven constraints generated upstream.
 
@@ -27,6 +27,6 @@ The goal is to prove the state machine invariants and execution logic of the EVM
 - **Negative:** Significant engineering effort required. Modeling EVM execution semantics and finite field R1CS constraints in Lean 4 is notoriously complex and slow.
 
 ## Next Steps
-- [x] Create `lean/SNAPKITTY/SnapKitty/Circuits.lean` to begin formalizing the Prime Field arithmetic and `DriftBound` comparator logic.
-- [x] Create `lean/SNAPKITTY/SnapKitty/Contracts.lean` to model the `AttestationRegistry` state machine (specifically the `usedNullifier` map).
+- [x] Create `lean/Multiplicity/universal_atomic/Circuits.lean` to begin formalizing the Prime Field arithmetic and `DriftBound` comparator logic.
+- [x] Create `lean/Multiplicity/universal_atomic/Contracts.lean` to model the `AttestationRegistry` state machine (specifically the `usedNullifier` map).
 - [x] Validate the `DriftBound` proof (sorry-bounded) before proceeding to the EVM state modeling.

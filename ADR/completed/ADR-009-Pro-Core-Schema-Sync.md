@@ -4,7 +4,7 @@
 Proposed
 
 ## Context
-The Multiplicity ecosystem consists of a public "Open Core" (Phase Mirror MCP) and a proprietary "Pro" layer. To maintain the **Zero Drift** mandate, the Pro version must stay perfectly synchronized with the underlying mathematical schemas of the Open Core (e.g., `mcp-contract.json`, `PersistentWormBlock`, and PIRTM state vectors). 
+The Multiplicity ecosystem consists of a public "Open Core" (Phase Mirror MCP) and a proprietary "Pro" layer. To maintain the **Zero Drift** mandate, the Pro version must stay perfectly synchronized with the underlying mathematical schemas of the Open Core (e.g., `mcp-contract.json`, `CrmfBlock`, and PIRTM state vectors). 
 
 Failure to synchronize results in "interpretive drift," where enterprise coordination logic operates on a stale or mismatched understanding of the Lawful Protocol-State.
 

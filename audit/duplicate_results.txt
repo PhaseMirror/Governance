@@ -19,8 +19,6 @@ Duplicate Main.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/crates/models/the_genius/lean/Main.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/crates/models/the_guardian/lean/Main.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/crates/proofs/Main.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/tests/Main.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/src/Main.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/models/ataraxia/ataraxia_adr/Main.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/models/echobraid/echobraid_adr/Main.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/models/finton/finton_adr/Main.lean
@@ -142,7 +140,6 @@ Duplicate prime_recursive.rs:
 ----------------------------------------
 Duplicate src.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/src/src.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/src.lean
 ----------------------------------------
 Duplicate TestMain.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/src/TestMain.lean
@@ -170,9 +167,6 @@ Duplicate Core.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/Core/multiplicity_substrate/Core.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/Core/position_aware/Core.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/adr-governance/ADR/Core.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/Lean4PolicyKernel/Core.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/Lean4PolicyKernel/Policies/Core.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/SnapKitty/Core.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/META_RELATIVITY/Core.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/models/ataraxia/ataraxia_adr/AtaraxiaAdr/Core.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/models/echobraid/echobraid_adr/EchobraidAdr/Core.lean
@@ -337,7 +331,6 @@ Duplicate transcript.rs:
 Duplicate ffi.rs:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/crates/ace-zk/src/ffi.rs
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/crates/multiplicity/rust/src/ffi.rs
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/crates/snapkitty/worm/src/ffi.rs
 ----------------------------------------
 Duplicate parity.rs:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/crates/ace-zk/src/parity.rs
@@ -806,7 +799,6 @@ Duplicate Basic.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/Core/alp/Basic.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/formal-test/FormalTest/Basic.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/KNOT_IN_TIME/Basic.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/tests/Basic.lean
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/models/finton/finton_adr/FintonAdr/Basic.lean
 ----------------------------------------
 Duplicate identity.rs:
@@ -941,7 +933,6 @@ Duplicate SpectralCert.lean:
 ----------------------------------------
 Duplicate Governance.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/Core/Governance.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/Lean4PolicyKernel/Policies/Governance.lean
 ----------------------------------------
 Duplicate MOC.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/Core/MOC.lean
@@ -999,15 +990,12 @@ Duplicate Multiplicity.lean:
 ----------------------------------------
 Duplicate SedonaSpine.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/Core/atomic_calculator/SedonaSpine.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/SnapKitty/SedonaSpine.lean
 ----------------------------------------
 Duplicate Circuits.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/Core/atomic_calculator/Circuits.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/SnapKitty/Circuits.lean
 ----------------------------------------
 Duplicate Contracts.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/Core/atomic_calculator/Contracts.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/SnapKitty/Contracts.lean
 ----------------------------------------
 Duplicate Lyapunov.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/Core/roc_engine/Lyapunov.lean
@@ -1018,8 +1006,6 @@ Duplicate Quantum.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/QUANTUM/Quantum.lean
 ----------------------------------------
 Duplicate tests.lean:
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/tests.lean
-  /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/gated/SNAPKITTY/tests/tests.lean
 ----------------------------------------
 Duplicate KernelTelemetry.lean:
   /home/multiplicity/Multiplicity/PhaseMirror/Prime/lean/projects/ACE–SCN-CSC/src/KernelTelemetry.lean
